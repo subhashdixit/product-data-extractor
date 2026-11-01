@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Extract structured product information from an authorized saved HTML page—without running its scripts."
+    />
+    <title>Product Data Extractor</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="badge">Subhash Dixit · Applied portfolio</div>
+      <h1>Product Data Extractor</h1>
+      <p>
+        Extract structured product information from an authorized saved HTML
+        page—without running its scripts.
+      </p>
+      <a href="https://github.com/subhashdixit/product-data-extractor"
+        >Source, concepts and operating guide ↗</a
+      >
+    </header>
+    <main>
+      <section>
+        <h2>1 · Load saved product markup</h2>
+        <button id="example">Load synthetic product page</button
+        ><label
+          >Saved HTML file (up to 3 MiB)<input
+            id="file"
+            type="file"
+            accept=".html,.htm,text/html" /></label
+        ><label
+          >Or paste HTML containing Product JSON-LD<textarea
+            id="html"
+          ></textarea></label
+        ><button id="extract">Extract products</button>
+      </section>
+      <section>
+        <h2>2 · Inspect structured fields</h2>
+        <div id="results"></div>
+        <button id="json" disabled>Download JSON</button
+        ><button id="csv" disabled>Download CSV</button>
+      </section>
+      <p id="status" role="status" aria-live="polite"></p>
+      <details>
+        <summary>How this works · scope and limitations</summary>
+        <p>
+          Only application/ld+json script text is parsed as JSON data; page
+          scripts and HTML are never inserted into the document. No live
+          Flipkart request, CAPTCHA bypass or account access is performed. Pages
+          without Product JSON-LD need a different source adapter.
+        </p>
+      </details>
+    </main>
+    <footer>
+      <p>
+        GitHub Pages · HTML / JavaScript · Original project preserved in source.
+      </p>
+    </footer>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
