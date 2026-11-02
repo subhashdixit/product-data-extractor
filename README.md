@@ -103,3 +103,7 @@ Original Flipkart_Scrapper files and historical CSVs are preserved outside the p
 This is an authorized saved-page/import workflow, not a live Flipkart crawler. No anti-bot challenge bypass, account scraping, automatic review harvesting or current-price promise. Some sites omit JSON-LD or render it only after client execution; such input produces no Product objects. Up to 3 MiB, 100 blocks/products, depth20 and 20,000 visited nodes. Exported data can be stale.
 
 The test suite checks calculation contracts and invalid inputs. It cannot establish that an input dataset is representative, that a heuristic is scientifically correct for every domain, or that a result is suitable for an automated consequential decision. Read the original source alongside the maintained browser implementation when comparing behavior.
+
+## Local dependency installation
+
+The maintained app is HTML/CSS/JavaScript and needs no Python packages. `requirements.txt` documents this; install development tools with `npm ci` using the pinned Node/npm versions. See [DEPENDENCIES.md](DEPENDENCIES.md). Original prototype requirements are preserved at `archive/prototype-requirements.in` where present; they are not the supported install command.
