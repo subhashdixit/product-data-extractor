@@ -1,5 +1,8 @@
 # Product Data Extractor
 
+**Reproducible versions:** [Dependency versions and exact setup](DEPENDENCIES.md).
+
+
 [Open the application](https://subhashdixit.github.io/product-data-extractor/) · [Report an issue](https://github.com/subhashdixit/product-data-extractor/issues)
 
 The original Flipkart-specific live scraper depended on fragile selectors and upstream access. This maintained app turns a user-authorized saved product page into inspectable structured data locally.
